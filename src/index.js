@@ -69,9 +69,9 @@ function onScroll(entries) {
     const newPhotos = photoApi.getPhoto();
 
     newPhotos.then(resp => {
-      if (resp.data.hits.length === 0) {
+      if (Math.ceil(resp.data.totalHits / 24) + 1 === photoApi.page) {
         observer.unobserve(refs.marker);
-        return notification();
+        notification();
       }
 
       renderCards(refs.gallery, resp.data);
