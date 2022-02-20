@@ -1,0 +1,21 @@
+.photo-card {
+  background-color: #fff;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  box-shadow: 5px 5px 10px 0px rgba(34, 60, 80, 0.4);
+}
+
+.photo-card:hover {
+  transform: scale(110%);
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+.info-item {
+  display: inherit;
+  grid-template-columns: repeat(1, auto);
+}
